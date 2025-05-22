@@ -1,4 +1,4 @@
-name: aula10
+name: aula14
 services:
   web:
     build: .
@@ -6,6 +6,7 @@ services:
       - "8080:8080"
     depends_on:
       - banco
+    restart: on-failure 
 
   banco:
     image: mariadb
